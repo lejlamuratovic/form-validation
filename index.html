@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Custom CSS-->
+  <link rel="stylesheet" href="css/style.css">
+  <!--Google Font (Poppins)-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+  <!--Custom JS-->
+  <script src="js/script.js" defer></script>
+  <!--Validation JS-->
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+  <script src="js/validation.js" defer></script>
+  <title>Log In & Sign Up</title>
+</head>
+<body>
+  <section class="wrapper">
+    <div class="signup form">
+      <h2 class = "signup-header">Signup</h2>
+      <form action="process-signup.php" method="post" class = "signup-form" id="signup" novalidate>
+
+        <input type="text" name="name" id="name" placeholder="Full name">
+        <input type="email" name="email" id="email" placeholder="Email address">
+        <input type="password" name="password" id="password" placeholder="Password">
+        <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Repeat assword">
+
+        <button>Signin</button>
+        <div class="checkbox">
+          <input type="checkbox" id="signup-checkbox">
+          <label for="signup-checkbox">I accept all terms & conditions</label>
+        </div>
+      </form>
+    </div>
+
+    <div class="login form">
+      <h2 class="login-header">Login</h2>
+      <form action="login.php" method="post" class="login-form" novalidate>
+        <input type="email" name="email" id="loginemail" placeholder="Email address" required>
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <a href="#">Forgot password?</a>
+        <button>Login</button>
+      </form>
+    </div>
+    
+  </section>
+  
+</body>
+</html>
